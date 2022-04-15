@@ -1,6 +1,6 @@
 package Applicatiepackage;
 
-public class Keuze {
+public class AutomatischeWas {
     private Programma gewensteProgramma;
     private Integer timerTijd;
 
