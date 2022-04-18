@@ -22,4 +22,11 @@ public class Was {
     public String getMateriaal(){
         return this.materiaal;
     }
+
+    public String toString(){
+        return "Gewicht: " + this.gewicht +
+                "\nKleur: " + this.kleur +
+                "\nMateriaal: " + this.materiaal;
+    }
+
 }

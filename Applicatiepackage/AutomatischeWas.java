@@ -1,8 +1,11 @@
 package Applicatiepackage;
 
+import java.util.ArrayList;
+
 public class AutomatischeWas {
     private Programma gewensteProgramma;
     private Integer timerTijd;
+    private ArrayList<Was> was = new ArrayList<Was>();
 
 
     public Programma gewensteProgramma(){
