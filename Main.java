@@ -45,6 +45,7 @@ public class Main {
                 //todo child klasses fixen van programma en hier objecten van aanmaken
                 //todo deze objecten samen met het object was --> in automatischewas duwen
                 //todo timer in automatischewas maken
+                //todo maak minimaal 3 tests
                 System.out.println("maak object van katoenProgramma");
             }
             if (was.getMateriaal().equals("wol")){
