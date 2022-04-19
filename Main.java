@@ -47,6 +47,9 @@ public class Main {
                 //todo timer in automatischewas maken
                 //todo maak minimaal 3 tests
                 System.out.println("maak object van katoenProgramma");
+                //todo fix
+                kort = kortProgramma();
+                katoenProgramma katoen = new katoenProgramma();
             }
             if (was.getMateriaal().equals("wol")){
                 System.out.println("maak object van wolprogramma");
@@ -54,7 +57,19 @@ public class Main {
             if (was.getMateriaal().equals("fijn")){
                 System.out.println("maak object van fijnprogramma");
             }
-            break;
+
+            public boolean kortProgramma(){
+                //todo fix
+                System.out.println("Wilt u een kort programma?");
+                String kortInput = scanner.nextLine();
+                Boolean kort = false;
+                if (kortInput.equalsIgnoreCase("ja")){
+                    kort = true;
+                    return kort;
+                } else{
+                    kort = false;
+                }
+            }
         }
     }
 }
