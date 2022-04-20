@@ -23,6 +23,7 @@ public class Was {
         return this.materiaal;
     }
 
+    @Override
     public String toString(){
         return "Gewicht: " + this.gewicht +
                 "\nKleur: " + this.kleur +

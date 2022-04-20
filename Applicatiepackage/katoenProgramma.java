@@ -5,5 +5,7 @@ public class katoenProgramma extends Programma{
 
     public katoenProgramma(Integer temperatuur, Integer toeren, Integer tijdsduur, boolean kort, boolean extraWater) {
         super(temperatuur, toeren, tijdsduur, kort, extraWater);
+//        super.temperatuur = this.temperatuur;
+//        super(temperatuur, toeren, tijdsduur, kort, extraWater);
     }
 }

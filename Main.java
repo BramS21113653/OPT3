@@ -41,35 +41,59 @@ public class Main {
             }
             Was was = new Was(gewicht, kleur, materiaal);
             System.out.println(was);
-            if (was.getMateriaal().equals("katoen")){
+            if (was.getMateriaal().equalsIgnoreCase("katoen")){
                 //todo child klasses fixen van programma en hier objecten van aanmaken
                 //todo deze objecten samen met het object was --> in automatischewas duwen
                 //todo timer in automatischewas maken
                 //todo maak minimaal 3 tests
-                System.out.println("maak object van katoenProgramma");
-                //todo fix
-                kort = kortProgramma();
-                katoenProgramma katoen = new katoenProgramma();
+                Boolean kort = kortProgramma();
+                Boolean extraWater = extraWater();
+                Programma katoen = new katoenProgramma(40, 1400, 60, kort, extraWater);
+                System.out.println(katoen);
             }
-            if (was.getMateriaal().equals("wol")){
-                System.out.println("maak object van wolprogramma");
+            if (was.getMateriaal().equalsIgnoreCase("wol")){
+                Boolean kort = kortProgramma();
+                Boolean extraWater = extraWater();
+                Programma wol = new wolProgramma(20, 600 , 60, kort, extraWater);
+                System.out.println(wol);
             }
-            if (was.getMateriaal().equals("fijn")){
-                System.out.println("maak object van fijnprogramma");
+            if (was.getMateriaal().equalsIgnoreCase("fijn")){
+                Boolean kort = kortProgramma();
+                Boolean extraWater = extraWater();
+                Programma fijn = new fijnProgramma(30, 800 , 60, kort, extraWater);
+                System.out.println(fijn);
             }
-
-            public boolean kortProgramma(){
-                //todo fix
-                System.out.println("Wilt u een kort programma?");
-                String kortInput = scanner.nextLine();
-                Boolean kort = false;
-                if (kortInput.equalsIgnoreCase("ja")){
-                    kort = true;
-                    return kort;
-                } else{
-                    kort = false;
-                }
-            }
+            //todo object vullen
+//            AutomatischeWas automatischeWas = new AutomatischeWas();
+            break;
+        }
+    }
+    private static boolean kortProgramma(){
+        //todo herzien
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Wilt u een kort programma?\nJa/Nee");
+        String kortInput = scanner.nextLine();
+        Boolean kort = false;
+        if (kortInput.equalsIgnoreCase("ja")){
+            kort = true;
+            return kort;
+        } else{
+            kort = false;
+            return kort;
+        }
+    }
+    private static boolean extraWater(){
+        //todo herzien
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Wilt u extra water?\nJa/Nee");
+        String kortInput = scanner.nextLine();
+        Boolean kort = false;
+        if (kortInput.equalsIgnoreCase("ja")){
+            kort = true;
+            return kort;
+        } else{
+            kort = false;
+            return kort;
         }
     }
 }
