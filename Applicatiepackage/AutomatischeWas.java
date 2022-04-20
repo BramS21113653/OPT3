@@ -6,32 +6,44 @@ import java.util.Scanner;
 
 public class AutomatischeWas {
     private Integer timerTijd;
-    private ArrayList<Programma> gewensteProgramma = new ArrayList<Programma>();
-    private ArrayList<Was> was = new ArrayList<Was>();
+    private Programma gewensteProgramma;
+    private Was was;
 
-    public AutomatischeWas(ArrayList<Programma> gewensteProgramma, ArrayList<Was> was){
+    public AutomatischeWas(Programma gewensteProgramma, Was was) {
         this.gewensteProgramma = gewensteProgramma;
         this.was = was;
     }
 
-    public ArrayList<Programma> getGewensteProgramma(){
+    public Programma getGewensteProgramma() {
         return gewensteProgramma;
     }
 
-    public Integer getTimer(){
+    public Integer getTimer() {
         return this.timerTijd;
     }
 
-    public void kiesTimer(){
+    public void kiesTimer() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Kies een timer (voer een getal in)...");
-        Integer timerTijd = scanner.nextInt();
-        this.timerTijd = timerTijd;
+        System.out.println("Wilt u een timer instellen?\nJa/Nee");
+        String antwoord = scanner.nextLine();
+        while (antwoord.equalsIgnoreCase("ja")) {
+            try {
+                System.out.println("Kies een timer (voer een getal in)...");
+                Integer timerTijd = scanner.nextInt();
+                this.timerTijd = timerTijd;
+                scanner.next();
+            } catch (Exception e) {
+                System.out.println("Graag een getal invoeren...");
+                scanner.next();
+            }
+        }
     }
 
     @Override
     public String toString(){
-        return "Hier volgt het wasprogramma..." +
-                "\n";
+        //todo objecten uitlezen en printen
+        return "Hier volgt alle info:" +
+                "\n" +
+                "\nTimer: " + this.timerTijd;
     }
 }

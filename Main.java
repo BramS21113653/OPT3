@@ -50,21 +50,34 @@ public class Main {
                 Boolean extraWater = extraWater();
                 Programma katoen = new katoenProgramma(40, 1400, 60, kort, extraWater);
                 System.out.println(katoen);
+                //todo fix automatischeWas (timer)
+                AutomatischeWas automatischeWas = new AutomatischeWas(katoen, was);
+                automatischeWas.kiesTimer();
+                //todo print statement wordt niet meer uitgevoerd door loop boven --> bij invoer van ja
+                System.out.println(automatischeWas);
             }
             if (was.getMateriaal().equalsIgnoreCase("wol")){
                 Boolean kort = kortProgramma();
                 Boolean extraWater = extraWater();
                 Programma wol = new wolProgramma(20, 600 , 60, kort, extraWater);
                 System.out.println(wol);
+                //todo fix automatischeWas (timer)
+                AutomatischeWas automatischeWas = new AutomatischeWas(wol, was);
+                automatischeWas.kiesTimer();
+                //todo print statement wordt niet meer uitgevoerd door loop boven --> bij invoer van ja
+                System.out.println(automatischeWas);
             }
             if (was.getMateriaal().equalsIgnoreCase("fijn")){
                 Boolean kort = kortProgramma();
                 Boolean extraWater = extraWater();
                 Programma fijn = new fijnProgramma(30, 800 , 60, kort, extraWater);
                 System.out.println(fijn);
+                //todo fix automatischeWas (timer)
+                AutomatischeWas automatischeWas = new AutomatischeWas(fijn, was);
+                automatischeWas.kiesTimer();
+                //todo print statement wordt niet meer uitgevoerd door loop boven --> bij invoer van ja
+                System.out.println(automatischeWas);
             }
-            //todo object vullen
-//            AutomatischeWas automatischeWas = new AutomatischeWas();
             break;
         }
     }
