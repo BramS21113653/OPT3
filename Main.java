@@ -42,9 +42,6 @@ public class Main {
             Was was = new Was(gewicht, kleur, materiaal);
             System.out.println(was);
             if (was.getMateriaal().equalsIgnoreCase("katoen")){
-                //todo child klasses fixen van programma en hier objecten van aanmaken
-                //todo deze objecten samen met het object was --> in automatischewas duwen
-                //todo timer in automatischewas maken
                 //todo maak minimaal 3 tests
                 Boolean kort = kortProgramma();
                 Boolean extraWater = extraWater();
