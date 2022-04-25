@@ -22,7 +22,7 @@ public class AutomatischeWas {
         return this.timerTijd;
     }
 
-    public void kiesTimer() {
+    public void setTimer() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Wilt u een timer instellen?\nJa/Nee");
         String antwoord = scanner.nextLine();
@@ -44,7 +44,7 @@ public class AutomatischeWas {
         return "\nHier volgt alle wasinformatie van het ideale wasprogramma:" +
                 "\n" + this.gewensteProgramma +
                 "\nTimer (de was begint over...): " + this.timerTijd + " uur" +
-                "\n\nVan de was: " +
+                "\n\nInfo over de was: " +
                 "\n" + this.was;
     }
 }

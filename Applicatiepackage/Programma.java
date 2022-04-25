@@ -1,5 +1,7 @@
 package Applicatiepackage;
 
+import java.util.Scanner;
+
 public class Programma {
     private Integer temperatuur;
     private Integer toeren;
@@ -7,12 +9,10 @@ public class Programma {
     private boolean kort;
     private boolean extraWater;
 
-    public Programma(Integer temperatuur, Integer toeren, Integer tijdsduur, boolean kort, boolean extraWater){
+    public Programma(Integer temperatuur, Integer toeren, Integer tijdsduur){
         this.temperatuur = temperatuur;
         this.toeren = toeren;
         this.tijdsduur = tijdsduur;
-        this.kort = kort;
-        this.extraWater = extraWater;
     }
 
     public Integer getTemperatuur(){
@@ -33,6 +33,36 @@ public class Programma {
 
     public boolean getExtraWater(){
         return this.extraWater;
+    }
+
+    public void extraWater(){
+        //todo herzien
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Wilt u extra water?\nJa/Nee");
+        String kortInput = scanner.nextLine();
+        Boolean kort = false;
+        if (kortInput.equalsIgnoreCase("ja")){
+            kort = true;
+            this.extraWater = true;
+        } else{
+            kort = false;
+            this.extraWater = false;
+        }
+    }
+
+    public void kortProgramma(){
+        //todo herzien
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Wilt u een kort programma?\nJa/Nee");
+        String kortInput = scanner.nextLine();
+        Boolean kort = false;
+        if (kortInput.equalsIgnoreCase("ja")){
+            kort = true;
+            this.kort = true;
+        } else{
+            kort = false;
+            this.kort = false;
+        }
     }
 
     @Override
