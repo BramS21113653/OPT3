@@ -41,9 +41,10 @@ public class AutomatischeWas {
 
     @Override
     public String toString(){
-        //todo objecten uitlezen en printen
-        return "Hier volgt alle info:" +
-                "\n" +
-                "\nTimer: " + this.timerTijd;
+        return "\nHier volgt alle wasinformatie van het ideale wasprogramma:" +
+                "\n" + this.gewensteProgramma +
+                "\nTimer (de was begint over...): " + this.timerTijd + " uur" +
+                "\n\nVan de was: " +
+                "\n" + this.was;
     }
 }

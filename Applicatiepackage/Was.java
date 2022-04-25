@@ -25,7 +25,7 @@ public class Was {
 
     @Override
     public String toString(){
-        return "Gewicht: " + this.gewicht +
+        return "Gewicht: " + this.gewicht + " kg" +
                 "\nKleur: " + this.kleur +
                 "\nMateriaal: " + this.materiaal;
     }

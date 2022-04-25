@@ -37,8 +37,7 @@ public class Programma {
 
     @Override
     public String toString(){
-        return "Wasprogramma:" +
-                "\nTemperatuur: " + this.temperatuur + " graden Celsius" +
+        return "Temperatuur: " + this.temperatuur + " graden Celsius" +
                 "\nToeren: " + this.toeren + " rotaties per minuut" +
                 "\nTijdsduur: " + this.tijdsduur + " minuten" +
                 "\nKort programma: " + this.kort +
