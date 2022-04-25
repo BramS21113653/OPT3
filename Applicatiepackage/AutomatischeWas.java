@@ -31,7 +31,7 @@ public class AutomatischeWas {
                 System.out.println("Kies een timer (voer een getal in)...");
                 Integer timerTijd = scanner.nextInt();
                 this.timerTijd = timerTijd;
-                scanner.next();
+                antwoord = "nee";
             } catch (Exception e) {
                 System.out.println("Graag een getal invoeren...");
                 scanner.next();
