@@ -25,7 +25,6 @@ public class Main {
                 try {
                     System.out.println("Kleur van de was?");
                     kleur = scanner.nextLine();
-                    System.out.printf(kleur);
                     break;
                 } catch (Exception e) {
                     System.out.println("Graag een kleur invoeren...");
@@ -46,8 +45,8 @@ public class Main {
             }
             Was was = new Was(gewicht, kleur, materiaal);
             if (was.getMateriaal().equalsIgnoreCase("katoen")){
-                //todo maak minimaal 3 tests
-                Programma katoen = new katoenProgramma(0, 1400, 60);
+                //todo maak minimaal 3 unit tests
+                katoenProgramma katoen = new katoenProgramma();
                 katoen.extraWater();
                 katoen.kortProgramma();
                 AutomatischeWas automatischeWas = new AutomatischeWas(katoen, was);
@@ -55,7 +54,7 @@ public class Main {
                 System.out.println(automatischeWas);
             }
             if (was.getMateriaal().equalsIgnoreCase("wol")){
-                Programma wol = new wolProgramma(20, 600, 60);
+                wolProgramma wol = new wolProgramma();
                 wol.extraWater();
                 wol.kortProgramma();
                 AutomatischeWas automatischeWas = new AutomatischeWas(wol, was);
@@ -63,7 +62,7 @@ public class Main {
                 System.out.println(automatischeWas);
             }
             if (was.getMateriaal().equalsIgnoreCase("fijn")){
-                Programma fijn = new fijnProgramma(30, 800, 60);
+                fijnProgramma fijn = new fijnProgramma();
                 fijn.extraWater();
                 fijn.kortProgramma();
                 AutomatischeWas automatischeWas = new AutomatischeWas(fijn, was);
