@@ -4,6 +4,11 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import java.time.Clock;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class AutomatischeWas {
     private Integer timerTijd;
     private Programma gewensteProgramma;
@@ -24,7 +29,9 @@ public class AutomatischeWas {
 
     public void setTimer() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Wilt u een timer instellen?\nJa/Nee");
+        // todo format timestamp
+        System.out.println("Wilt u een timer instellen?\nJa/Nee" +
+                "\nHet is nu: " + getCurrentTimeStamp());
         String antwoord = scanner.nextLine();
         while (antwoord.equalsIgnoreCase("ja")) {
             try {
@@ -37,6 +44,22 @@ public class AutomatischeWas {
                 scanner.next();
             }
         }
+    }
+
+    public static String getCurrentTimeStamp() {
+        Clock clock = Clock.system(ZoneId.of("Europe/Berlin"));
+        ZonedDateTime now = ZonedDateTime.now(clock);
+        return DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(now);
+    }
+
+    public void beginTijd(){
+        //todo format timestamp en print in automatisch wassen wanneer de was begint/klaar is
+        System.out.printf("\n" + getCurrentTimeStamp());
+    }
+
+    public void eindTijd(){
+        //todo format timestamp en print in automatisch wassen wanneer de was begint/klaar is
+        System.out.printf("\n" + getCurrentTimeStamp());
     }
 
     @Override

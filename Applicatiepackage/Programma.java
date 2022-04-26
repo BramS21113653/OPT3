@@ -35,6 +35,10 @@ public class Programma {
         return this.extraWater;
     }
 
+    public void setKort(boolean kort){
+        this.kort = kort;
+    }
+
     public void extraWater(){
         //todo herzien
         Scanner scanner = new Scanner(System.in);

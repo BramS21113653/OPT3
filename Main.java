@@ -3,7 +3,6 @@ import Applicatiepackage.*;
 import javax.sound.midi.Soundbank;
 import java.util.Scanner;  // Import the Scanner class
 
-
 public class Main {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
@@ -52,6 +51,8 @@ public class Main {
                 AutomatischeWas automatischeWas = new AutomatischeWas(katoen, was);
                 automatischeWas.setTimer();
                 System.out.println(automatischeWas);
+                // todo remove test hieronder wanneer format klaar is
+                automatischeWas.eindTijd();
             }
             if (was.getMateriaal().equalsIgnoreCase("wol")){
                 wolProgramma wol = new wolProgramma();
