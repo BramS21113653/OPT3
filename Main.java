@@ -51,7 +51,7 @@ public class Main {
                 AutomatischeWas automatischeWas = new AutomatischeWas(katoen, was);
                 automatischeWas.setTimer();
                 System.out.println(automatischeWas);
-                // todo remove test hieronder wanneer format klaar is
+                automatischeWas.beginTijd();
                 automatischeWas.eindTijd();
             }
             if (was.getMateriaal().equalsIgnoreCase("wol")){
@@ -61,6 +61,8 @@ public class Main {
                 AutomatischeWas automatischeWas = new AutomatischeWas(wol, was);
                 automatischeWas.setTimer();
                 System.out.println(automatischeWas);
+                automatischeWas.beginTijd();
+                automatischeWas.eindTijd();
             }
             if (was.getMateriaal().equalsIgnoreCase("fijn")){
                 fijnProgramma fijn = new fijnProgramma();
@@ -69,6 +71,8 @@ public class Main {
                 AutomatischeWas automatischeWas = new AutomatischeWas(fijn, was);
                 automatischeWas.setTimer();
                 System.out.println(automatischeWas);
+                automatischeWas.beginTijd();
+                automatischeWas.eindTijd();
             }
             break;
         }

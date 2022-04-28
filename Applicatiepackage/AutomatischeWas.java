@@ -1,13 +1,10 @@
 package Applicatiepackage;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
+import java.util.Date;
 import java.util.Scanner;
 
-import java.time.Clock;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+
 
 public class AutomatischeWas {
     private Integer timerTijd;
@@ -29,9 +26,8 @@ public class AutomatischeWas {
 
     public void setTimer() {
         Scanner scanner = new Scanner(System.in);
-        // todo format timestamp
-        System.out.println("Wilt u een timer instellen?\nJa/Nee" +
-                "\nHet is nu: " + getCurrentTimeStamp());
+        System.out.println("Wilt u een timer instellen?" +
+                "\nHet is nu: " + getCurrentTimeStamp() + "\nJa/Nee");
         String antwoord = scanner.nextLine();
         while (antwoord.equalsIgnoreCase("ja")) {
             try {
@@ -46,20 +42,30 @@ public class AutomatischeWas {
         }
     }
 
-    public static String getCurrentTimeStamp() {
-        Clock clock = Clock.system(ZoneId.of("Europe/Berlin"));
-        ZonedDateTime now = ZonedDateTime.now(clock);
-        return DateTimeFormatter.ISO_LOCAL_DATE_TIME.format(now);
+    public Date getCurrentTimeStamp(){
+        Calendar calendar1 = Calendar.getInstance();
+        return calendar1.getTime();
     }
 
-    public void beginTijd(){
-        //todo format timestamp en print in automatisch wassen wanneer de was begint/klaar is
-        System.out.printf("\n" + getCurrentTimeStamp());
+    public Date addHoursToJavaUtilDate(int hours) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.HOUR_OF_DAY, hours);
+        return calendar.getTime();
+    }
+
+    public Date addHoursToJavaUtilDate(int timer, int duur) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.HOUR_OF_DAY, timer);
+        calendar.add(Calendar.HOUR_OF_DAY, duur);
+        return calendar.getTime();
+    }
+
+        public void beginTijd(){
+        System.out.printf("\nDe was begint: " + addHoursToJavaUtilDate(this.timerTijd));
     }
 
     public void eindTijd(){
-        //todo format timestamp en print in automatisch wassen wanneer de was begint/klaar is
-        System.out.printf("\n" + getCurrentTimeStamp());
+        System.out.printf("\nDe was is klaar: " + addHoursToJavaUtilDate(this.timerTijd, (gewensteProgramma.getTijdsduur() / 60)));
     }
 
     @Override
