@@ -47,7 +47,7 @@ public class AutomatischeWas {
         return calendar1.getTime();
     }
 
-    public Date addHoursToJavaUtilDate(int hours) {
+    public static Date addHoursToJavaUtilDate(int hours) {
         Calendar calendar = Calendar.getInstance();
         calendar.add(Calendar.HOUR_OF_DAY, hours);
         return calendar.getTime();
