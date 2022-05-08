@@ -11,18 +11,11 @@ class AutomatischeWasTest {
     @Test
     void addHoursToJavaUtilDate() {
         //arrange
-        int uren = 2;
-        Calendar actualDate = Calendar.getInstance();
+        int uren = 10;
+        Date actualDate = new Date();
         //act
         Date newDate = AutomatischeWas.addHoursToJavaUtilDate(uren);
-        actualDate.add(actualDate.HOUR_OF_DAY, uren);
         //check
-        //todo assert statement aanpassen
-        //todo newDate minus uren, actualDate
-        //todo cal.add(Calendar.HOUR, -1);
-        System.out.println(actualDate.getTime());
-        System.out.println(newDate);
-        Assert.assertTrue((actualDate.getTime()).equals(newDate));
-//        Assert.assertDatesAlmostEqual(actualDate.getTime(), newDate);
+        Assert.assertTrue(newDate.after(actualDate));
     }
 }

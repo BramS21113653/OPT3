@@ -65,7 +65,8 @@ public class AutomatischeWas {
     }
 
     public void eindTijd(){
-        System.out.printf("\nDe was is klaar: " + addHoursToJavaUtilDate(this.timerTijd, (gewensteProgramma.getTijdsduur() / 60)));
+        System.out.printf("\nDe was is klaar: " +
+                addHoursToJavaUtilDate(this.timerTijd, (gewensteProgramma.getTijdsduur() / 60)));
     }
 
     @Override
