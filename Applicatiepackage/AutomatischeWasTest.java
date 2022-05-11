@@ -18,4 +18,12 @@ class AutomatischeWasTest {
         //check
         Assert.assertTrue(newDate.after(actualDate));
     }
+
+    @Test
+    void beginTijd() {
+    }
+
+    @Test
+    void eindTijd() {
+    }
 }
