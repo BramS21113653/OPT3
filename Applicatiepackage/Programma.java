@@ -19,6 +19,14 @@ public class Programma {
         return this.temperatuur;
     }
 
+    public void changeTemperatuurMin(Integer aftrek) {
+        this.temperatuur = this.temperatuur - aftrek;
+    }
+
+    public void changeTemperatuurPlus(Integer plus) {
+        this.temperatuur = this.temperatuur + plus;
+    }
+
     public Integer getToeren(){
         return this.toeren;
     }

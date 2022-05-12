@@ -9,19 +9,18 @@ public class wolProgramma extends Programma {
         super(wolProgramma.temperatuur, wolProgramma.toeren, wolProgramma.tijdsduur);
     }
 
-    //todo kort programma altijd override
     @Override
     public void kortProgramma(){
         super.setKort(true);
     }
 
-    @Override
-    public String toString(){
-        return "Temperatuur: " + this.temperatuur + " graden Celsius" +
-                "\nToeren: " + this.toeren + " rotaties per minuut" +
-                "\nTijdsduur: " + this.tijdsduur + " minuten" +
-                "\nKort programma: " + super.getKort() + ", dit programma is altijd kort " +
-                "want het is een wolprogramma!" +
-                "\nExtra water: " + super.getExtraWater();
-    }
+//    @Override
+//    public String toString(){
+//        return "Temperatuur: " + this.temperatuur + " graden Celsius" +
+//                "\nToeren: " + this.toeren + " rotaties per minuut" +
+//                "\nTijdsduur: " + this.tijdsduur + " minuten" +
+//                "\nKort programma: " + super.getKort() + ", dit programma is altijd kort " +
+//                "want het is een wolprogramma!" +
+//                "\nExtra water: " + super.getExtraWater();
+//    }
 }

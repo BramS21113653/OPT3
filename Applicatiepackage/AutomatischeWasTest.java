@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Calendar;
 import java.util.Date;
 
-class AutomatischeWasTest {
+class Tests {
 
     @Test
     void addHoursToJavaUtilDate() {
@@ -20,10 +20,18 @@ class AutomatischeWasTest {
     }
 
     @Test
-    void beginTijd() {
+    void addHoursToJAvaUtilDate() {
+        //arrange
+        int uren = 10;
+        int timer = 2;
+        Date actualDate = new Date();
+        //act
+        Date newDate = AutomatischeWas.addHoursToJavaUtilDate(timer, uren);
+        //check
+        Assert.assertTrue(newDate.after(actualDate));
     }
 
-    @Test
-    void eindTijd() {
-    }
+//    @Test
+//    void () {
+//    }
 }

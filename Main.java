@@ -44,25 +44,43 @@ public class Main {
             }
             Was was = new Was(gewicht, kleur, materiaal);
             if (was.getMateriaal().equalsIgnoreCase("katoen")){
-                //todo maak minimaal 3 unit tests
                 katoenProgramma katoen = new katoenProgramma();
                 katoen.extraWater();
                 katoen.kortProgramma();
                 AutomatischeWas automatischeWas = new AutomatischeWas(katoen, was);
                 automatischeWas.setTimer();
+                //todo milieuBewust aanpassen en test toevoegen
+                automatischeWas.milieuBewust(true);
                 System.out.println(automatischeWas);
+                boolean anderProgramma = automatischeWas.anderProgramma();
+                if (anderProgramma == true) {
+                    System.out.println(automatischeWas.toString1());
+                }
                 automatischeWas.beginTijd();
                 automatischeWas.eindTijd();
+//                while (true) {
+//                    // todo check of was has started or has finished (observer pattern)
+//                    break;
+//                }
             }
-            if (was.getMateriaal().equalsIgnoreCase("wol")){
+            if (was.getMateriaal().equalsIgnoreCase("wol")) {
                 wolProgramma wol = new wolProgramma();
                 wol.extraWater();
                 wol.kortProgramma();
                 AutomatischeWas automatischeWas = new AutomatischeWas(wol, was);
                 automatischeWas.setTimer();
+                automatischeWas.milieuBewust(true);
                 System.out.println(automatischeWas);
+                boolean anderProgramma = automatischeWas.anderProgramma();
+                if (anderProgramma == true) {
+                    System.out.println(automatischeWas.toString1());
+                }
                 automatischeWas.beginTijd();
                 automatischeWas.eindTijd();
+//                while (true) {
+//                    // todo check of was has started or has finished (observer pattern)
+//                    break;
+//                }
             }
             if (was.getMateriaal().equalsIgnoreCase("fijn")){
                 fijnProgramma fijn = new fijnProgramma();
@@ -70,9 +88,18 @@ public class Main {
                 fijn.kortProgramma();
                 AutomatischeWas automatischeWas = new AutomatischeWas(fijn, was);
                 automatischeWas.setTimer();
+                automatischeWas.milieuBewust(true);
                 System.out.println(automatischeWas);
+                boolean anderProgramma = automatischeWas.anderProgramma();
+                if (anderProgramma == true) {
+                    System.out.println(automatischeWas.toString1());
+                }
                 automatischeWas.beginTijd();
                 automatischeWas.eindTijd();
+//                while (true) {
+//                    // todo check of was has started or has finished (observer pattern)
+//                    break;
+//                }
             }
             break;
         }
