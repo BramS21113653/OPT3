@@ -49,7 +49,6 @@ public class Main {
                 katoen.kortProgramma();
                 AutomatischeWas automatischeWas = new AutomatischeWas(katoen, was);
                 automatischeWas.setTimer();
-                //todo milieuBewust aanpassen en test toevoegen
                 automatischeWas.milieuBewust(true);
                 System.out.println(automatischeWas);
                 boolean anderProgramma = automatischeWas.anderProgramma();
