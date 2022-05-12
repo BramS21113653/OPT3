@@ -31,7 +31,10 @@ class Tests {
         Assert.assertTrue(newDate.after(actualDate));
     }
 
-//    @Test
-//    void () {
-//    }
+    @Test
+    void beginTijd () {
+            int a = 1;
+            int b = 1;
+            Assert.assertEquals(a, b);
+    }
 }
