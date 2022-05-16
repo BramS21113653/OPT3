@@ -15,6 +15,13 @@ public class Programma {
         this.tijdsduur = tijdsduur;
     }
 
+    public boolean weigerWasprogramma(String materiaal, Integer gewicht){
+        if((materiaal.equalsIgnoreCase("Katoen") || materiaal.equalsIgnoreCase("Katoen")
+                || materiaal.equalsIgnoreCase("Katoen")) & gewicht < 8 & gewicht > 2){
+            return true;
+        } else{return false;}
+    }
+
     public Integer getTemperatuur(){
         return this.temperatuur;
     }
