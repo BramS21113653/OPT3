@@ -11,6 +11,7 @@ public class wolProgramma extends Programma {
     @Override
     public void kortProgramma(){
         super.setKort(true);
+        super.setTijdsduurKort();
     }
 
 //    @Override

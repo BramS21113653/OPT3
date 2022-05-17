@@ -46,6 +46,14 @@ public class Programma {
         return this.tijdsduur;
     }
 
+    public void setTijdsduurKort(){
+        this.tijdsduur = 30;
+    }
+
+    public void setExtraWater(){
+        this.extraWater = true;
+    }
+
     public boolean getKort(){
         return this.kort;
     }
@@ -82,6 +90,7 @@ public class Programma {
         if (kortInput.equalsIgnoreCase("ja")){
             kort = true;
             this.kort = true;
+            this.tijdsduur = 30;
         } else{
             kort = false;
             this.kort = false;
