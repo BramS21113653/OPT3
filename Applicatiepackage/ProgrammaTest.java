@@ -48,4 +48,45 @@ class ProgrammaTest {
         assertEquals(60, programma6.getTijdsduur());
         assertEquals(60, programma7.getTijdsduur());
     }
+
+    @Test
+    void checkTijdsduur() {
+        // de code is geschreven met gebruik van scanners, hierdoor zijn de testen iets wat lastiger
+        // te begrijpen misschien, aangezien ik hier andere methodes voor hem aangemaakt om de scanners te omzeilen
+        katoenProgramma katoenProgramma = new katoenProgramma();
+        katoenProgramma.bepaalTijdsduur(1);
+        katoenProgramma.setTijdsduurKort();
+        katoenProgramma.setExtraWater();
+        assertEquals(30, katoenProgramma.getTijdsduur());
+
+        wolProgramma wolProgramma = new wolProgramma();
+        wolProgramma.bepaalTijdsduur(1);
+        // voor wol alsnog kortProgramma(), want wol heeft altijd een kort programma in dit programma! zie onder
+        wolProgramma.kortProgramma();
+        //geen extra water, dus wordt niet aangeroepen (wordt in code gedaan met scanner)
+        assertEquals(30, wolProgramma.getTijdsduur());
+
+        katoenProgramma katoenProgramma1 = new katoenProgramma();
+        katoenProgramma1.bepaalTijdsduur(4);
+        // geen kort programma dus er wordt niks aangeroepen... namelijk scanners in code
+        // geen extra water dus er wordt niks aangeroepen... namelijk scanners in code
+        assertEquals(45, katoenProgramma1.getTijdsduur());
+
+        wolProgramma wolProgramma1 = new wolProgramma();
+        wolProgramma1.bepaalTijdsduur(4);
+        wolProgramma1.kortProgramma();
+        wolProgramma1.setExtraWater();
+        assertEquals(30, wolProgramma1.getTijdsduur());
+
+        katoenProgramma katoenProgramma2 = new katoenProgramma();
+        katoenProgramma2.bepaalTijdsduur(6);
+        // geen kort programma dus er wordt niks aangeroepen... namelijk scanners in code
+        katoenProgramma2.setExtraWater();
+        assertEquals(60, katoenProgramma2.getTijdsduur());
+
+        wolProgramma wolProgramma2 = new wolProgramma();
+        wolProgramma2.bepaalTijdsduur(6);
+        wolProgramma2.kortProgramma();
+        assertEquals(30, wolProgramma2.getTijdsduur());
+    }
 }
