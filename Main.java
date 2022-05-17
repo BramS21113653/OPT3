@@ -43,8 +43,13 @@ public class Main {
                 }
             }
             Was was = new Was(gewicht, kleur, materiaal);
-            if (was.getMateriaal().equalsIgnoreCase("katoen")){
+            if(!was.geldigeWas()) {
+                System.out.println("Dit is geen geldige gewicht/materiaal was...");
+                System.exit(1);
+            }
+                if (was.getMateriaal().equalsIgnoreCase("katoen")){
                 katoenProgramma katoen = new katoenProgramma();
+                katoen.bepaalTijdsduur(gewicht);
                 katoen.extraWater();
                 katoen.kortProgramma();
                 AutomatischeWas automatischeWas = new AutomatischeWas(katoen, was);
@@ -64,6 +69,7 @@ public class Main {
             }
             if (was.getMateriaal().equalsIgnoreCase("wol")) {
                 wolProgramma wol = new wolProgramma();
+                wol.bepaalTijdsduur(gewicht);
                 wol.extraWater();
                 wol.kortProgramma();
                 AutomatischeWas automatischeWas = new AutomatischeWas(wol, was);
@@ -83,6 +89,7 @@ public class Main {
             }
             if (was.getMateriaal().equalsIgnoreCase("fijn")){
                 fijnProgramma fijn = new fijnProgramma();
+                fijn.bepaalTijdsduur(gewicht);
                 fijn.extraWater();
                 fijn.kortProgramma();
                 AutomatischeWas automatischeWas = new AutomatischeWas(fijn, was);
