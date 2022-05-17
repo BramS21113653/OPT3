@@ -11,6 +11,13 @@ public class Was {
         this.materiaal = materiaal;
     }
 
+    public boolean geldigeWas(){
+        if((this.materiaal.equalsIgnoreCase("Katoen") || this.materiaal.equalsIgnoreCase("wol")
+                || this.materiaal.equalsIgnoreCase("fijn")) && this.gewicht < 8 && this.gewicht > 0){
+            return true;
+        } else{return false;}
+    }
+
     public Integer getGewicht(){
         return this.gewicht;
     }
